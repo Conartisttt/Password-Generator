@@ -9,11 +9,11 @@ The purpose of this application is to enable employees to generate random passwo
 ## Features
 
 * Has responsive user interface that adapts to multiple screen sizes.
-* When button is clicked to generate a new password, a series of promps is presented for password criteria.
+* When button is clicked to generate a new password, a series of prompts is presented for password criteria.
 * When prompted for password criteria, the user selects which criteria to include in the password.
 * When prompted for the length of the password, the user can select any length between 8 and 128 characters.
 * When asked for character types to include in the password, the user can confirm whether or not to include lowercase, uppercase, numeric, and/or special characters.
-* When each prompt is answered, the users input should be valiadated and at least one character type should be selected.
+* When each prompt is answered, the users input should be validated and at least one character type should be selected.
 * When all prompts are answered, the generated password matches the selected critera.
 * When the password is generated, it is displayed in either an alert, or written to the page.
 * The following image shows a demonstration of the web applications appearance and functionality:
