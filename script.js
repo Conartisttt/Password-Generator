@@ -20,7 +20,7 @@ function writePassword() {
 // Asks the user a set of questions, and assigns their values to variables
 function generatePassword() {
 
-  // How many characters?
+  // How many characters (and converts the string to a number using pareInt)
   const passwordLength = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128 characters."));
 
 
