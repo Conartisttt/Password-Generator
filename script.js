@@ -36,7 +36,9 @@ function generatePassword() {
     return "Min is 8";
   }
 
+  // Check if the user is entering a number inside of passwordLength prompt, if not, return error message
   if(isNaN(passwordLength)){
+    alert("You must enter a number")
     return "Please enter numbers"
   }
   // Include lowercase?
@@ -51,36 +53,42 @@ function generatePassword() {
   // include special characters?
   const includeSpecial = confirm("Do you want to include special characters?");
 
-  // Use all of these criteria to generate a random password and return its value to the input text area
+  // Create an empty array to store your characters based on user choices
   var validCharacters = []
 
+  // if they choose to include lowercase, add them to the validCharacters array
   if (includeLowercase) {
     validCharacters = validCharacters.concat(lowercase)
   }
 
+    // if they choose to include uppercase, add them to the validCharacters array
   if (includeUppercase) {
     validCharacters = validCharacters.concat(uppercase)
   }
 
+    // if they choose to include special characters, add them to the validCharacters array
   if (includeSpecial) {
     validCharacters = validCharacters.concat(special)
   }
 
+  // if they choose to include numbers, add them to the validCharacters array
   if (includeNumeric) {
     validCharacters = validCharacters.concat(numeric)
   }
 
+  // if they did not choose to add any character types, display error message
 if (validCharacters.length == 0) {
   alert("You must select at least one character type");
   return "";
 }
 
-  console.log(validCharacters);
+// set password variable to an empty array
+  let password = ""
 
-  var password = ""
+  // for loop that chooses a random character from validCharacters, and loops it the amount of times entered in passwordLength prompt
   for(let i=0;i<passwordLength;i++){
-    var randomIndex = Math.floor(Math.random() * validCharacters.length)
-    password += validCharacters[randomIndex]
+    const randomIndex = Math.floor(Math.random() * validCharacters.length)
+    password += validCharacters[randomIndex] //This is saying password = password + validCharacters[randomIndex]
   }
 return password;
 
