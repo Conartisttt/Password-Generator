@@ -28,4 +28,4 @@ The purpose of this application is to enable employees to generate random passwo
 ## Credits
 
 * Starter code provided by edX Boot Camps LLC
-* Code updated by Conner Martin
+* Code updated by Conner Martin, with assistance from tutor Sangeetha Kaliaperumal
