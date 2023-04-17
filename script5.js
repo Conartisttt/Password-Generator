@@ -1,3 +1,5 @@
+// This is my final attempt, using the idea of separation of concerns. It works!!!
+
 // Assigns variable to button in HTML
 const generateBtn = document.querySelector("#generate");
 
@@ -89,15 +91,16 @@ function getCharacterSet() {
     const numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     const special = ['"', "'", "\\", "!", "$", "#", "%", "&", "(", ")", "*", ".", ",", "-", "/", ":", ";", "<", ">", "=", "?", "@", "[", "]", "^", "-", "_", "~", "|", "{", "}", "+"];
 
-
+    // Asking for character set selections
     const includeLowercase = confirm("Do you want to include lowercase characters?");
     const includeUppercase = confirm("Do you want to include uppercase characters?");
     const includeNumeric = confirm("Do you want to include numeric characters?");
     const includeSpecial = confirm("Do you want to include special characters?");
 
+    // Creating an empty array to store selected characters
     let selectedCharacters = [];
 
-    // Check which character types the user wants to include and add them to the selectedCharacters array
+    // Add each character set the user included to the selectedCharacters array
     if (includeLowercase) {
         selectedCharacters = selectedCharacters.concat(lowercase);
     }

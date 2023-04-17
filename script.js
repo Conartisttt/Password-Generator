@@ -1,3 +1,7 @@
+// This is my consolidated code. It does not use separation of concerns. 
+// Use this as final version. Needs final updating before project is due.
+// Separate concerns again? Maybe?
+
 // Assigns variable to button in HTML
 const generateBtn = document.querySelector("#generate");
 
