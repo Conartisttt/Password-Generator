@@ -60,6 +60,14 @@ function getLength() {
 
     const passwordLength = prompt("How many characters would you like your password to be? Please choose between 8 and 128 characters.");
 
+    // Check if the user has not entered anything, and clicked cancel right away
+    if (passwordLength == null) {
+        alert("You must enter a number")
+        passwordError("You must enter a number for the password generator to generate a password");
+        return "";
+
+    }
+
     // Check if the user has entered a password length less than 8
     if (passwordLength < 8) {
         alert("You must select a password between 8 and 128 characters");
