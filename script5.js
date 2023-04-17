@@ -7,6 +7,9 @@ generateBtn.addEventListener("click", writePassword);
 // Writes the generated password to the #password input in HTML
 function writePassword() {
     let password = generatePassword();
+    if (!password) {
+        return "";
+    }
     const passwordText = document.querySelector("#password");
     passwordText.value = password;
 }
