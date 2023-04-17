@@ -1,4 +1,4 @@
-// Attempting on my own
+// Attempting on my own - first attempt. It works.
 
 // Assigns variable to button in HTML
 const generateBtn = document.querySelector("#generate");
