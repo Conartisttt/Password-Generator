@@ -4,7 +4,7 @@
 
 The purpose of this application is to enable employees to generate random passwords based on criteria that they have selected to provide greater security. In this project, starter code was provided, and I have updated this starter code to meet the criteria in the features section.
 
-* **The final result can be found here:** [Password-Generator](link to deployed site goes here)
+* **The final result can be found here:** [Password-Generator](https://conartisttt.github.io/Password-Generator/)
 
 ## Features
 
@@ -16,7 +16,7 @@ The purpose of this application is to enable employees to generate random passwo
 * When each prompt is answered, the users input should be validated and at least one character type should be selected.
 * When all prompts are answered, the generated password matches the selected critera.
 * When the password is generated, it is displayed in either an alert, or written to the page.
-* The following image shows a demonstration of the web applications appearance and functionality:
+* The following image shows a demonstration of the web applications appearance:
 ![applicaiton demo with red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
 ## Technologies Used
