@@ -1,7 +1,3 @@
-// This is my consolidated code. It does not use separation of concerns. 
-// Use this as final version. Needs final updating before project is due.
-// Separate concerns again? Maybe?
-
 // Assigns variable to button in HTML
 const generateBtn = document.querySelector("#generate");
 
@@ -26,15 +22,14 @@ function generatePassword() {
 
     let password = "";
 
+    // Ask the user how many characters they would like their password to be using the prompt method
     const passwordLength = prompt("How many characters would you like your password to be? Please choose between 8 and 128 characters.");
 
-    // Check if the user has entered a password length less than 8
+    // Check if the user has entered a password length between 8 and 128 characters, if not, return error message
     if (passwordLength < 8) {
         alert("You must select a password between 8 and 128 characters");
         return passwordLength + " is less than the minimum allowable characters of 8.";
     }
-
-    // Check if the user has entered a password length greater than 128
     if (passwordLength > 128) {
         alert("You must select a password between 8 and 128");
         return passwordLength + " is greater than the maximum allowable characters of 128.";
@@ -46,6 +41,14 @@ function generatePassword() {
         return passwordLength + " is not a number. Please enter a number between 8 and 128.";
     }
 
+    // Check if the user has entered nothing inside of passwordLength prompt, if so, return error message
+    if (passwordLength == null) {
+        alert("You must enter a number")
+        return "You must enter a number for the password generator to generate a password";
+
+    }
+
+    // Check which character types the user wants to include and add them to the selectedCharacters array
     const includeLowercase = confirm("Do you want to include lowercase characters?");
     const includeUppercase = confirm("Do you want to include uppercase characters?");
     const includeNumeric = confirm("Do you want to include numeric characters?");
@@ -53,7 +56,6 @@ function generatePassword() {
 
     let selectedCharacters = [];
 
-    // Check which character types the user wants to include and add them to the selectedCharacters array
     if (includeLowercase) {
         selectedCharacters = selectedCharacters.concat(lowercase);
     }
@@ -67,7 +69,7 @@ function generatePassword() {
         selectedCharacters = selectedCharacters.concat(special);
     }
 
-    // Check if the user has selected at least one character type
+    // Check if the user has selected at least one character type, if not, return error message
     if (selectedCharacters.length == 0) {
         alert("You must select at least one character type.");
         return "Without any character types selected, how am I supposed to generate a password? Please select at least one character type.";
