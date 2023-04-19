@@ -25,6 +25,12 @@ function generatePassword() {
     // Ask the user how many characters they would like their password to be using the prompt method
     const passwordLength = prompt("How many characters would you like your password to be? Please choose between 8 and 128 characters.");
 
+    // Check if the user has entered nothing inside of passwordLength prompt, if so, return error message
+    if (passwordLength == null) {
+        alert("You must enter a number")
+        return "You must enter a number for the password generator to generate a password";
+    }
+
     // Check if the user has entered a password length between 8 and 128 characters, if not, return error message
     if (passwordLength < 8) {
         alert("You must select a password between 8 and 128 characters");
@@ -39,13 +45,6 @@ function generatePassword() {
     if (isNaN(passwordLength)) {
         alert("You must enter a number")
         return passwordLength + " is not a number. Please enter a number between 8 and 128.";
-    }
-
-    // Check if the user has entered nothing inside of passwordLength prompt, if so, return error message
-    if (passwordLength == null) {
-        alert("You must enter a number")
-        return "You must enter a number for the password generator to generate a password";
-
     }
 
     // Check which character types the user wants to include and add them to the selectedCharacters array
