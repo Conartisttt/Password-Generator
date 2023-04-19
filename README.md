@@ -16,7 +16,7 @@ The purpose of this application is to enable employees to generate random passwo
 * When each prompt is answered, the users input should be validated and at least one character type should be selected.
 * When all prompts are answered, the generated password matches the selected critera.
 * When the password is generated, it is displayed in either an alert, or written to the page.
-* The following image shows a demonstration of the web applications appearance:
+* The following image shows a demonstration of the web applications appearance and functionality:
 ![applicaiton demo with red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
 
 ## Technologies Used
